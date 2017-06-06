@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewData["Title"] = "Weather";
+}
+
+<h2>Weather</h2>
+<p>Powered by <a href="https://www.yr.no/" target="_blank">https://www.yr.no/</a></p>
+<form>
+    <select name="stad">
+        <option value="Lulea">Luleå</option>
+        <option value="Karlstad">Karlstad</option>
+        <option value="Stockholm">Stockholm</option>
+    </select>
+    <br /><br />
+    <button asp-area="" asp-controller="Home" asp-action="ShowWeatherButtonClick">Display Weather</button>
+</form>
+
