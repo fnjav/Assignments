@@ -5,17 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Blackjack.PL"
         mc:Ignorable="d"
-        Title="Blackjack" Height="383.169" Width="465.842">
+        Title="Blackjack" Height="383.169" Width="465.842"
+        ResizeMode="NoResize">
     <Grid Margin="0,0,0,0">
         <Label Content="Dealer" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold"/>
         <Button Content="Draw" HorizontalAlignment="Left" Margin="373,297,0,0" VerticalAlignment="Top" Width="75" Click="Draw_Click"/>
         <Button Content="Stay" HorizontalAlignment="Left" Margin="373,322,0,0" VerticalAlignment="Top" Width="75" Click="Stay_Click"/>
-        <Label Content="Player" HorizontalAlignment="Left" Margin="10,280,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.146,1.07" FontSize="16" FontWeight="Bold"/>
+        <Label x:Name="lblPlayer" Content="Player" HorizontalAlignment="Left" Margin="10,152,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.146,1.07" FontSize="12" FontWeight="Bold"/>
         <TextBox x:Name="txtNumberOfPlayers" HorizontalAlignment="Left" Height="23" Margin="304,7,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="64" TextChanged="TextBox_TextChanged"/>
         <Label Content="Number of players:" HorizontalAlignment="Left" Margin="193,3,0,0" VerticalAlignment="Top"/>
         <Button Content="New Game" HorizontalAlignment="Left" Margin="373,7,0,0" VerticalAlignment="Top" Width="75" Click="NewGame_Click"/>
         <Label Content="Value" HorizontalAlignment="Left" Margin="10,33,0,0" VerticalAlignment="Top"/>
-        <Label Content="Value" HorizontalAlignment="Left" Margin="10,262,0,0" VerticalAlignment="Top"/>
         <Button Content="Next Player" HorizontalAlignment="Left" Margin="10,316,0,0" VerticalAlignment="Top" Width="75" Click="NextPlayer_Click"/>
         <TextBox x:Name="txtNumberOfDecks" HorizontalAlignment="Left" Height="23" Margin="304,33,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="64" TextChanged="TextBox_TextChanged"/>
         <Label Content="Number of decks:" HorizontalAlignment="Left" Margin="193,33,0,0" VerticalAlignment="Top" Width="106"/>

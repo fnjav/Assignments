@@ -9,48 +9,43 @@ namespace Blackjack.BLL
         public Player Dealer { get; private set; }
         public Player Player { get; set; }
 
-        public void Start(int numberOfPlayers, int numberOfDecks)
+        public Game()
         {
             _players = new List<Player>();
             _deck = new Deck();
-            Dealer = new Dealer();
-            Initialize();
         }
-
-        private string SetPlayer(Player player)
+        public void Start(int numberOfPlayers, int numberOfDecks)
         {
-            return player.ToString();
+            _players.Clear();
+            _players.AddRange(Player.New(numberOfPlayers));
+            _deck.Shuffle(numberOfDecks);
+            Dealer = new Dealer();
+
+            Initialize();
         }
 
         public string NextPlayer()
         {
-            return string.Empty;
+            Player = _players[_players.IndexOf(Player) == _players.Count - 1 ? 0 : _players.IndexOf(Player) + 1];
+            
+            return Player.ToString();
         }
 
         private void Initialize()
         {
-            _deck.Shuffle();
+            Player = _players[0];
+
             foreach (var p in _players)
             {
-                NextPlayer();
+                Draw();
+                Draw();
 
-                Draw();
-                Draw();
+                NextPlayer();
             }
 
 
             Draw(true); // Draw two cards for dealer
             Draw(true);
-        }
-
-        private void InitializePlayers()
-        {
-
-        }
-
-        private void InitializeDeck()
-        {
-
         }
 
         public void Draw(bool isDealer = false)

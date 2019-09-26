@@ -18,13 +18,14 @@ namespace Blackjack.BLL
             _cards = new List<Card>();
         }
 
-        public void AddCard(Card card) => _cards.Add(card);
+        public void AddCard(Card card)
+        {
+            _cards.Add(card);
+            LastCard = card;
+        }
 
         public void Clear() => _cards.Clear();
 
-        public override string ToString()
-        {
-            return base.ToString();
-        }
+        public override string ToString() => string.Join(", ", _cards);
     }
 }

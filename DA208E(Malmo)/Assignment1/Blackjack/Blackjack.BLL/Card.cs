@@ -13,5 +13,7 @@ namespace Blackjack.BLL
             Suite = suite;
             Value = value;
         }
+
+        public override string ToString() => $"{Value.ToString()} of {Suite.ToString()}";
     }
 }

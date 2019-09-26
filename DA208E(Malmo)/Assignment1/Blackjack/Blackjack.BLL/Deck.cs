@@ -40,7 +40,7 @@ namespace Blackjack.BLL
             var deck = new List<Card>();
 
             foreach (var suite in Enumerable.Range(1, 4))
-                foreach (var value in Enumerable.Range(1, 52))
+                foreach (var value in Enumerable.Range(1, 13))
                     deck.Add(new Card((Suite)suite, (Value)value));
 
             return deck;

@@ -33,17 +33,17 @@ namespace Blackjack.PL
 
         private void NewGame_Click(object sender, RoutedEventArgs e)
         {
-            //Game.Start(NumberOfPlayers);
+            Game.Start(NumberOfPlayers, NumberOfDecks);
         }
 
         private void NextPlayer_Click(object sender, RoutedEventArgs e)
         {
-            Game.NextPlayer();
+            lblPlayer.Content = Game.NextPlayer();
         }
 
         private void Reshuffle_Click(object sender, RoutedEventArgs e)
         {
-            //Game.Start(NumberOfPlayers);
+            Game.Start(NumberOfPlayers, NumberOfDecks);
         }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
